@@ -1,0 +1,7 @@
+{
+  "include": [
+    "./components/**/*.vue"
+  ],
+  "title": "组件文档",
+  "genType": "docute"
+}

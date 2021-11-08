@@ -1,0 +1,74 @@
+{
+  "name": "library",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "gulp": "npx gulp css && npx gulp all",
+    "rollupbuild:es": "npx rollup --config ./build/rollup.config.js",
+    "rollupbuild:umd": "format=umd npx rollup --config ./build/rollup.config.js",
+    "rollupbuild:min": "minify=true npx rollup --config ./build/rollup.config.js",
+    "build:comp": "npx webpack --config ./build/webpack.component.js",
+    "serve": "vue-cli-service serve",
+    "build": "npm run gulp && npm run rollupbuild:es && npm run rollupbuild:umd && npm run rollupbuild:min && npm run build:comp",
+    "build:vue": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit",
+    "document": "vuese gen && gulp && vuese serve --open"
+  },
+  "dependencies": {
+    "core-js": "^3.19.1",
+    "sass-loader": "^8.0.0",
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.1.1",
+    "node-sass": "^4.14.1",
+    "rollup": "^1.32.1",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.3.1",
+    "rollup-plugin-uglify": "^6.0.4",
+    "rollup-plugin-vue": "^5.1.9",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-component": "^1.1.1",
+    "babel-plugin-import": "^1.13.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "@vue/cli-plugin-babel": "^4.5.15",
+    "@vue/cli-plugin-eslint": "^4.5.15",
+    "@vue/cli-service": "^4.5.15",
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "vue-template-compiler": "^2.6.14",
+    "webpack-cli": "^4.9.1",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

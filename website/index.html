@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>组件说明文档</title>
+    <link rel="stylesheet" href="https://unpkg.com/docute@4/dist/docute.css">
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <div id="docute">
+      首页
+    </div>
+    <script src="https://unpkg.com/docute@4/dist/docute.js"></script>
+    <script src="./library.umd.js"></script>
+    <script>
+      new Docute({
+        target: '#docute',
+        sidebar: [
+          {
+            title: '组件文档',
+            links: [
+              
+                {
+                  title: 'myBtn',
+                  link: '/components/myBtn'
+                }
+              
+            ]
+          }
+        ]
+      })
+    </script>
+  </body>
+</html>
