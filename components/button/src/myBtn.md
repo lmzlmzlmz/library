@@ -30,7 +30,7 @@ export default {
   },
   methods:{
     btnClick(){
-      alert('click me')
+      alert('点击')
     }
   }
 }
