@@ -14,7 +14,6 @@ module.exports = {
                 && item.constructor.name !== "FriendlyErrorsWebpackPlugin"
             })
           }
-          // console.log(config.plugins)
           return{
             mode: 'production',
             entry: {
@@ -39,7 +38,6 @@ module.exports = {
           }
       },
       chainWebpack: config => {
-          // css output config
           let miniCssExtractPlugin = new MiniCssExtractPlugin(
               {
                   filename: 'library.css',
