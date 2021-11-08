@@ -19,9 +19,6 @@ function compileAll() {
         .pipe(sass.sync())
         .pipe(concat('index.css'))
         .pipe(cssmin())
-        // .pipe(rename({
-        //     suffix: '.min'
-        // }))
         .pipe(dest('./dist/css'));
 }
 
@@ -29,8 +26,4 @@ function compileAll() {
 gulp.task('css',compileCss)
 gulp.task('all',compileAll)
 
-// function copyfont() {
-//   return src('./src/fonts/**')
-//     .pipe(cssmin())
-//     .pipe(dest('./lib/fonts'));
-// }
+
